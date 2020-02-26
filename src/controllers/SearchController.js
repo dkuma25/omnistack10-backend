@@ -4,7 +4,8 @@ const parseStringAsArray = require('../utils/parseStringAsArray')
 module.exports = {
     async index(req, res) {
         const { latitude, longitude, techs } = req.query
-        const techsArray = parseStringAsArray(techs)
+        const techsArray = parseStringAsArray(techs, true)
+        console.log(techsArray)
         const devs = await Dev.find({
             techs: {
                 $in: techsArray
