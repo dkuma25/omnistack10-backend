@@ -10,15 +10,15 @@ const server = http.Server(app)
 
 setupWebsocket(server)
 
-// mongoose.connect('mongodb+srv://omnistack10:omnistack10@cluster0-lmjul.mongodb.net/omnistack10?retryWrites=true&w=majority', {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// })
-
-mongoose.connect('mongodb://localhost:27017/omnistack10', {
+mongoose.connect('mongodb+srv://omnistack10:omnistack10@cluster0-lmjul.mongodb.net/omnistack10?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
+
+// mongoose.connect('mongodb://localhost:27017/omnistack10', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// })
 
 app.use(cors())
 app.use(express.json())
